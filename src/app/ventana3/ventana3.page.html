@@ -1,0 +1,47 @@
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--contenido de la app-->
+  <ion-content class="ion-padding"> 
+    <h4>Bienvenido querido Usuario!</h4>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title> Revisar historial de viajes </ion-card-title>
+        <ion-card-subtitle>Se le permitira al usuario, revisar su historial de viajes acumulados</ion-card-subtitle>
+        <ion-button [routerLink]="['/ventana4']">Entrar</ion-button>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Realizar un viaje</ion-card-title>
+        <ion-card-subtitle>Realiza un viaje!, viaja y evalua al conductor </ion-card-subtitle>
+        <ion-button [routerLink]="['/ventana5']">Entrar</ion-button>
+      </ion-card-header>
+    
+    </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Configuración de usuario</ion-card-title>
+          <ion-card-subtitle>configure y deje a su gusto su usuario</ion-card-subtitle>
+          <ion-button [routerLink]="['/ventana6']">Entrar</ion-button>
+        </ion-card-header>
+      </ion-card>
+
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>¿Quienes somos?</ion-card-title>
+        <ion-card-subtitle>configure y deje a su gusto su usuario</ion-card-subtitle>
+        <ion-button [routerLink]="['/ventana7']">Entrar</ion-button>
+        </ion-card-header>
+      </ion-card>
+      
+  </ion-content>
+  <ion-button [routerLink]="['/home']">Cerrar Sesion</ion-button>
+

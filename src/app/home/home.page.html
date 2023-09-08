@@ -1,0 +1,30 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      the paradise of the wheel
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <section class="form-register">
+    <h4>Iniciar Sesion</h4>
+    <h6>nombre de usuario</h6>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="usuario1">
+    <br>
+    <h6>contraseña</h6>
+    <input class="controls" type="password" name="correo" id="correo" placeholder="*****">
+    <br>
+    <ion-button [routerLink]="['/ventana3']"> Iniciar sesion</ion-button>
+    <br>
+    <br>
+    <p>si no tienes cuenta haz click aqui: </p>
+    <div class="boton2">
+      <ion-button [routerLink]="['/register']">Registrar</ion-button>
+    </div>
+  </section>
+</ion-content>
+

@@ -1,0 +1,37 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Opciones</ion-title>
+    </ion-toolbar>
+    
+    <ion-button [routerLink]="['/ventana4']"fill="clear">Historial de viajes de Usuario</ion-button>
+    <br>
+    <ion-button [routerLink]="['/ventana5']" fill="clear">realizar viaje</ion-button>
+    <br>
+    <ion-button [routerLink]="['/ventana6']"fill="clear">configuracion </ion-button>
+    <br>
+    <ion-button [routerLink]="['/ventana7']"fill="clear">quienes somos</ion-button>
+    <br>
+  </ion-header>
+  <!--contenido del menu-->
+
+  <ion-button [routerLink]="['/home']">Cerrar Sesion</ion-button>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ventana6</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+<ion-button [routerLink]="['/ventana3']">Volver</ion-button>

@@ -1,0 +1,124 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Opciones</ion-title>
+    </ion-toolbar>
+    
+    <ion-button [routerLink]="['/ventana4']"fill="clear">Historial de viajes de Usuario</ion-button>
+    <br>
+    <ion-button [routerLink]="['/ventana5']" fill="clear">realizar viaje</ion-button>
+    <br>
+    <ion-button [routerLink]="['/ventana6']"fill="clear">configuracion </ion-button>
+    <br>
+    <ion-button [routerLink]="['/ventana7']"fill="clear">quienes somos</ion-button>
+    <br>
+  </ion-header>
+  <!--contenido del menu-->
+
+  <ion-button [routerLink]="['/home']">Cerrar Sesion</ion-button>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-list lines="full">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Primer viaje</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Nombre Conductor: Andrea Bustamante
+        </div>
+        <div class="ion-padding" slot="content">
+          nombre Auto: suzuki aerio 2007
+
+        </div>
+        <div class="ion-padding" slot="content">
+          destino: Espacio Urbano, Viña Del Mar
+        </div>
+        <div class="ion-padding" slot="content">
+          precio total: $7.500
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+
+  <ion-list lines="inset">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>segundo viaje</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Nombre Conductor: Pedro Pancrasio
+        </div>
+        <div class="ion-padding" slot="content">
+          nombre Auto: suzuki vitara 1998
+
+        </div>
+        <div class="ion-padding" slot="content">
+          destino: mall de Quilpue
+        </div>
+        <div class="ion-padding" slot="content">
+          precio total: $2.500
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+  
+  <ion-list lines="none">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>tercer viaje</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Nombre Conductor: Elvis Tec
+        </div>
+        <div class="ion-padding" slot="content">
+          nombre Auto: chevrolet aveo 2010
+
+        </div>
+        <div class="ion-padding" slot="content">
+          destino: Estacion Miramar
+        </div>
+        <div class="ion-padding" slot="content">
+          precio total: 12.000
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+
+  <ion-list lines="none">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>cuarto viaje</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Nombre Conductor: Javier Bustamente
+        </div>
+        <div class="ion-padding" slot="content" >
+          nombre Auto: suzuki 600
+
+        </div>
+        <div class="ion-padding" slot="content" >
+          destino: Santiago
+        </div>
+        <div class="ion-padding" slot="content" >
+          precio total: $29.990
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+</ion-content>
+<ion-button [routerLink]="['/ventana3']">Volver</ion-button>

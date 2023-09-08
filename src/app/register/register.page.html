@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <section class="form-register">
+    <h4>Registrar Usuario</h4>
+    <h5>Nombre</h5>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+    <h5>Apellido</h5>
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+    <h5>Correo</h5>
+    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+    <h5>Contraseña</h5>
+    <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+    <h5>Nickname</h5>
+    <input class="controls" type="text" name="usuario" id="usuaario" placeholder="ingrese nickname">
+    <h5>Region</h5>
+    <ion-list>
+      <ion-item>
+        <ion-select label="Region" placeholder="">
+          <ion-select-option value="select1">Región de Arica y Parinacota</ion-select-option>
+          <ion-select-option value="select2">Región de Tarapacá</ion-select-option>
+          <ion-select-option value="select3">Región de Antofagasta</ion-select-option>
+          <ion-select-option value="select4">Región de Atacama</ion-select-option>
+          <ion-select-option value="select5">Región de Coquimbo</ion-select-option>
+          <ion-select-option value="select6">Región de Valparaíso</ion-select-option>
+          <ion-select-option value="select4">Región Metropolitana</ion-select-option>
+          <ion-select-option value="select5">Región de O'Higgins</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-checkbox>aceptas terminos y condiciones?</ion-checkbox>
+    <br>
+    <ion-button [routerLink]="['/home']">Concluir</ion-button>
+    <br>
+    <br>
+    <p> ¿Tienes cuenta? haz click aqui:</p>
+    <ion-button [routerLink]="['/home']">Iniciar Sesion</ion-button>
+  </section>
+
+</ion-content>
+

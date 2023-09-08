@@ -1,0 +1,44 @@
+.form-register{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius:4px;
+    font-family:'calibri';
+    color: white;
+  }
+  
+  .form-register h4{
+   font-size: 22px;
+   margin-bottom: 20px;
+  }
+  
+  .controls{
+
+    background: #24303c;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+  
+  }
+
+  .select-fruit{
+    background: #24303c;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';  
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  ion-menu::part(backdrop) {
+    background-color: rgba(255, 0, 255, 0.5);
+  }
+  
+  ion-menu::part(container) {
+    border-radius: 0 20px 20px 0;
+  
+    box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+  }
