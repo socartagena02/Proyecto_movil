@@ -8,6 +8,7 @@ import { Ventana3PageRoutingModule } from './ventana3-routing.module';
 
 import { Ventana3Page } from './ventana3.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
