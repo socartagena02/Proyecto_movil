@@ -12,7 +12,8 @@ export class RegisterPage implements OnInit {
   
   formularioRegistro: FormGroup;
   
-  constructor(public fb: FormBuilder) { 
+  constructor(public fb: FormBuilder,
+    public alertController: AlertController) { 
     this.formularioRegistro = this.fb.group({
       'nombre': new FormControl("", Validators.required),
       'apellido': new FormControl("", Validators.required),
@@ -24,23 +25,20 @@ export class RegisterPage implements OnInit {
 
   ngOnInit() {
   }
-//  @Component({
-//    selector: 'app-register',
-//    templateUrl: 'register.page.html',
-//    styleUrls: ['register.page.scss'],
-//  })
-//  export class RegisterPage {
-//    constructor(public alertController: AlertController) {
+
+  async guardar(){
+    var f = this.formularioRegistro.value;
+
+    if(this.formularioRegistro.invalid){
+      const alert = await this.alertController.create({
+        header: 'datos incompletos',
+        message: 'tienes que completar el formulario porfavor',
+        buttons: ['OK'],
+      });
   
-//    async presentAlert() {
-//      const alert = await this.alertController.create({
-//        header: 'Alerta',
-//        subHeader: 'Mensaje importante',
-//        message: 'Ingrese los datos correspondientes',
-//        buttons: ['Aceptar'],
-//      });
-  
-//      await alert.present();
-//    }
-//   }
+      await alert.present();
+      return;
+    }
+  }
+
   }

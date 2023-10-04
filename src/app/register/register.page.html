@@ -42,12 +42,11 @@
     <br>
     <ion-checkbox>aceptas terminos y condiciones?</ion-checkbox>
     <br>
-    <ion-button [routerLink]="['/home']">Concluir</ion-button>
+    <ion-button (click)="guardar()">Aceptar</ion-button>
     <br>
     <br>
     <p> ¿Tienes cuenta? haz click aqui:</p>
-    <ion-button [routerLink]="['/home']">Iniciar Sesion</ion-button>
-<!-- <ion-button (click)="presentAlert()">Aceptar</ion-button> --> 
+    <ion-button [routerLink]="['/home']">Iniciar Sesion</ion-button> 
 
   </section>
 
