@@ -11,7 +11,6 @@
     </ion-toolbar>
   </ion-header>
 
-
   <section class="form-register">
     <h4>Registrar Usuario</h4>
     <h5>Nombre</h5>
@@ -19,7 +18,7 @@
     <h5>Apellido</h5>
     <ion-input label="apellido" label-placement="floating" fill="outline" placeholder="Ingrese apellido"></ion-input>
     <h5>Correo</h5>
-    <ion-input label="correo" type="email" label-placement="floating" fill="outline" placeholder="Ingrese correo"></ion-input>
+    <ion-input label="Correo" type = "email" label-placement="floating" fill="outline" placeholder="Ingrese Correo"></ion-input>
     <h5>Contraseña</h5>
     <ion-input label="contraseña" type="password" label-placement="floating" fill="outline" placeholder="Ingrese contraseña"></ion-input>
     <h5>Nickname</h5>
@@ -45,9 +44,10 @@
     <ion-button (click)="guardar()">Aceptar</ion-button>
     <br>
     <br>
+    
     <p> ¿Tienes cuenta? haz click aqui:</p>
     <ion-button [routerLink]="['/home']">Iniciar Sesion</ion-button> 
-
+    
   </section>
 
 </ion-content>

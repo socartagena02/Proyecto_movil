@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AlertButton, AlertController } from '@ionic/angular';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -19,13 +20,13 @@ export class RegisterPage implements OnInit {
       'apellido': new FormControl("", Validators.required),
       'contraseña': new FormControl("", Validators.required),
       'Nickname' : new FormControl ("", Validators.required),
-      'correo' : new FormControl ("", Validators.required)
+      'correo' : ['', [Validators.required,Validators.email]],
     });
   }
 
   ngOnInit() {
   }
-
+  //valida si esta completado el registro
   async guardar(){
     var f = this.formularioRegistro.value;
 
@@ -38,7 +39,51 @@ export class RegisterPage implements OnInit {
   
       await alert.present();
       return;
+    } else { //Parece que ignora este else cuando se hace el ejemplo
+      const alert = await this.alertController.create({
+        header: 'datos completadoss',
+        message: 'Vuelve al inicio para iniciar sesion',
+        buttons: ['OK'],
+      })
+    }
+
+    //El codígo valida el correo que este correcto
+    class RegisterPage{
+      Correo: string = 'correo@ejemplo.com';
+      constructor() {
+        this.Correo='Correo';
+      }
+      
+      validarCorreo(correo: String): Boolean {
+        const correoPrimitivo = correo.toString();
+        const expresionRegular= /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}(?:\.es)?$/;
+        return expresionRegular.test(correoPrimitivo);
+      }
+      
+      //Aqui cuando el campo del correo esta vacio
+      correoVacio(correo: string): boolean{
+        return correo.trim() === "";
+      }
+      campoCorreoVacio() {
+        const correoVacio= this.formularioRegistro.invalid('correo').null; //formularioRegistro al parecer no esta definida mientras que lo esta en la linea 14
+        if (this.correoVacio(this.Correo)){ 
+          console.log('El campo esta vacio');
+        } else{
+          return
+        }
+      }
+      
+      validarYMostrarCorreo() {
+        if (this.Correo) {
+          if (this.validarCorreo(this.Correo)) {
+            console.log('Correo electrónico válido');
+          }
+        } else {
+          console.log('Campo de correo electrónico vacío');
+        }
+        const registerPage = new RegisterPage();
+        registerPage.validarYMostrarCorreo();
+      }
     }
   }
-
-  }
+}
