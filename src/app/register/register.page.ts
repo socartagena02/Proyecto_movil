@@ -50,6 +50,7 @@ export class RegisterPage implements OnInit {
     //El codígo valida el correo que este correcto
     class RegisterPage{
       Correo: string = 'correo@ejemplo.com';
+      formularioRegistro: any;
       constructor() {
         this.Correo='Correo';
       }
