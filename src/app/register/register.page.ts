@@ -28,7 +28,7 @@ export class RegisterPage implements OnInit {
   }
   //valida si esta completado el registro
   async guardar(){
-    var f = this.formularioRegistro.value;
+     this.formularioRegistro.value;
 
     if(this.formularioRegistro.invalid){
       const alert = await this.alertController.create({
