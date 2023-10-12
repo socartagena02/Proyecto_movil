@@ -31,7 +31,7 @@ export class HomePage {
   
       await alert.present();
       return;
-    } else { //Parece que ignora este else cuando se hace el ejemplo
+    } else { 
       const alert = await this.alertController.create({
         header: 'datos completados',
         message: 'Vuelve al inicio para iniciar sesion',
