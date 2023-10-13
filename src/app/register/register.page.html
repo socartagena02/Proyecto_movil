@@ -17,8 +17,6 @@
     <ion-input label="nombre" label-placement="floating" fill="outline" placeholder="Ingrese nombre"></ion-input>
     <h5>Apellido</h5>
     <ion-input label="apellido" label-placement="floating" fill="outline" placeholder="Ingrese apellido"></ion-input>
-    <h5>Correo</h5>
-    <ion-input label="Correo" type = "email" label-placement="floating" fill="outline" placeholder="Ingrese Correo"></ion-input>
     <h5>Contraseña</h5>
     <ion-input label="contraseña" type="password" label-placement="floating" fill="outline" placeholder="Ingrese contraseña"></ion-input>
     <h5>Nickname</h5>
@@ -39,9 +37,10 @@
       </ion-item>
     </ion-list>
     <br>
-    <ion-checkbox>aceptas terminos y condiciones?</ion-checkbox>
+    <p>¿Eres alumno del Duoc UC?</p>
     <br>
-    <ion-button (click)="guardar()">Aceptar</ion-button>
+    <ion-button (click)="Si()">Si</ion-button>
+    <ion-button (click)="No()">No</ion-button>
     <br>
     <br>
     

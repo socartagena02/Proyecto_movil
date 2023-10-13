@@ -26,47 +26,62 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 
-$ancho-imagen: 500px;
-$alto-imagen: 150px;
-
 ion-content.fondohome{
-    --background: url("https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80") no-repeat;
-    width: $ancho-imagen;
-    height: $alto-imagen;
-    position: center;
+    --background: url("https://digitalsynopsis.com/wp-content/uploads/2014/06/supercar-wallpapers-mclaren-4.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
 }
 
 ion-content.fondoregister{
-    --background: url("https://wallpapers.com/images/hd/chile-valparaiso-at-night-pjxcvq7wppj99mzx.jpg") no-repeat;
-    width: $ancho-imagen;
-    height: $alto-imagen;
-    position: center;
+    --background: url("https://wallpapers.com/images/hd/chile-valparaiso-at-night-pjxcvq7wppj99mzx.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
 }
 
 ion-content.fondoregister{
-    --background: url("https://c4.wallpaperflare.com/wallpaper/8/268/977/architecture-bridge-building-chile-wallpaper-preview.jpg") no-repeat;
-    width: $ancho-imagen;
-    height: $alto-imagen;
-    position: center;
+    --background: url("https://i.pinimg.com/originals/0f/1a/35/0f1a35e9d7d23e613cc3ed62a547964c.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
 }
 
 ion-content.ion-padding{
-    --background: url("https://www.daxonconstruction.com/wp-content/uploads/2019/07/Starbucks-01.jpg") no-repeat;
-    width: $ancho-imagen;
-    height: $alto-imagen;
-    position: center;
+    --background: url("https://www.daxonconstruction.com/wp-content/uploads/2019/07/Starbucks-01.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
+}
+secti.form-register{
+    --background: url("https://www.plataformaarquitectura.cl/wp-content/uploads/2010/07/1279927055-dsc-0133du.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
 }
 
-ion-content.fondoventana4{
-    --background: url("https://www.plataformaarquitectura.cl/wp-content/uploads/2010/07/1279927055-dsc-0133du.jpg") no-repeat;
-    width: $ancho-imagen;
-    height: $alto-imagen;
-    position: center;
-}
 
 ion-content.fondoventana6{
-    --background: url("https://media.gettyimages.com/id/1491348884/es/foto/tienda-de-comida-r%C3%A1pida-dunkin-donuts-por-la-noche.jpg?s=170667a&w=gi&k=20&c=Rww2nfdfcNLoqyT3oF4snTsklsudMnnZjNuXm--lEw8=") no-repeat;
-    width: $ancho-imagen;
-    height: $alto-imagen;
-    position: center;
+    --background: url("https://cdn.wallpapersafari.com/31/77/iQw5no.png") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
 }

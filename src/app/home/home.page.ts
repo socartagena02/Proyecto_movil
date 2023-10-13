@@ -22,24 +22,6 @@ export class HomePage {
   }
 
   async confirmar() {
-    if(this.inicioSesion.invalid){
-      const alert = await this.alertController.create({
-        header: 'datos incompletos',
-        message: 'tienes que completar el formulario porfavor',
-        buttons: ['OK'],
-      });
-  
-      await alert.present();
-      return;
-    } else { 
-      const alert = await this.alertController.create({
-        header: 'datos completados',
-        message: 'Vuelve al inicio para iniciar sesion',
-        buttons: ['OK'],
-      })
-
-    await alert.present();
     return;
   } 
-  }
 }
