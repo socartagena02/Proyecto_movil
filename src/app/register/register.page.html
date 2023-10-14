@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="fondoregister">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">register</ion-title>
@@ -22,7 +22,8 @@
     <h5>Nickname</h5>
     <ion-input label="Nickname" label-placement="floating" fill="outline" placeholder="Ingrese apodo"></ion-input>
     <br>
-    <ion-button (click)="guardar()">Aceptar</ion-button>
+    <ion-button (click)="Si()">Si</ion-button>
+    <ion-button (click)="No()">No</ion-button>
     <br>
     <br>
     

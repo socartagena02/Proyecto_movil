@@ -24,3 +24,64 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+ion-content.fondohome{
+    --background: url("https://digitalsynopsis.com/wp-content/uploads/2014/06/supercar-wallpapers-mclaren-4.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
+}
+
+ion-content.fondoregister{
+    --background: url("https://wallpapers.com/images/hd/chile-valparaiso-at-night-pjxcvq7wppj99mzx.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
+}
+
+ion-content.fondoregister{
+    --background: url("https://i.pinimg.com/originals/0f/1a/35/0f1a35e9d7d23e613cc3ed62a547964c.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
+}
+
+ion-content.ion-padding{
+    --background: url("https://www.daxonconstruction.com/wp-content/uploads/2019/07/Starbucks-01.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
+}
+secti.form-register{
+    --background: url("https://www.plataformaarquitectura.cl/wp-content/uploads/2010/07/1279927055-dsc-0133du.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
+}
+
+
+ion-content.fondoventana6{
+    --background: url("https://cdn.wallpapersafari.com/31/77/iQw5no.png") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
+}

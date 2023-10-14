@@ -34,7 +34,11 @@ const routes: Routes = [
   {
     path: 'ventana7',
     loadChildren: () => import('./ventana7/ventana7.module').then( m => m.Ventana7PageModule)
+  },  {
+    path: 'reset-password',
+    loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
   },
+
 ];
 
 @NgModule({

@@ -25,8 +25,6 @@ export class HomePage {
   }
 
   async confirmar() {
-    var f = this.inicioSesion.value;
-    
     if(this.inicioSesion.invalid){
       const alert = await this.alertController.create({
         header: 'datos incompletos',
@@ -46,5 +44,4 @@ export class HomePage {
     await alert.present();
     return;
   } 
-  }
 }
