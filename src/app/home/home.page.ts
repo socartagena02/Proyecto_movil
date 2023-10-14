@@ -24,7 +24,7 @@ export class HomePage {
 
   }
 
-  async confirmar() {
+  async confirmar(): Promise<void> {
     if(this.inicioSesion.invalid){
       const alert = await this.alertController.create({
         header: 'datos incompletos',
@@ -34,6 +34,7 @@ export class HomePage {
   
       await alert.present();
       return;
+      
     } //else { //Parece que ignora este else cuando se hace el ejemplo
       //const alert = await this.alertController.create({
   //       header: 'datos completados',
