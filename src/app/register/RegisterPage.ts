@@ -37,6 +37,7 @@ export class RegisterPage implements OnInit {
 
       await alert.present();
       return;
+      
     } else if (this.formularioRegistro.valid) { //Parece que ignora este else cuando se hace el ejemplo
       const alert = await this.alertController.create({
         header: 'datos completadoss',
