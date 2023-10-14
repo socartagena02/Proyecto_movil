@@ -16,12 +16,17 @@ export class HomePage {
   constructor(private alertController: AlertController,
     public fb : FormBuilder) {
     this.inicioSesion = this.fb.group({
-      'contraseña': new FormControl("", Validators.required),
       'Nickname' : new FormControl ("", Validators.required),
+      'contraseña': new FormControl("", Validators.required),
     });
+  }
+  ngOnInit(){
+
   }
 
   async confirmar() {
+    var f = this.inicioSesion.value;
+    
     if(this.inicioSesion.invalid){
       const alert = await this.alertController.create({
         header: 'datos incompletos',
