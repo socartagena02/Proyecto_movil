@@ -11,7 +11,7 @@ import { AlertController } from '@ionic/angular';
 })
 
 export class HomePage {
-  inicioSesion: any;
+  inicioSesion: FormGroup;
 
   constructor(private alertController: AlertController,
     public fb : FormBuilder) {
@@ -34,15 +34,15 @@ export class HomePage {
   
       await alert.present();
       return;
-    } else { //Parece que ignora este else cuando se hace el ejemplo
-      const alert = await this.alertController.create({
-        header: 'datos completados',
-        message: 'Vuelve al inicio para iniciar sesion',
-        buttons: ['OK'],
-      })
+    } //else { //Parece que ignora este else cuando se hace el ejemplo
+      //const alert = await this.alertController.create({
+  //       header: 'datos completados',
+  //       message: 'Vuelve al inicio para iniciar sesion',
+  //       buttons: ['OK'],
+  //     })
 
-    await alert.present();
-    return;
-   } 
+  //   await alert.present();
+  //   return;
+  //  } 
  }
 }
