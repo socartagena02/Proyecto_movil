@@ -67,15 +67,26 @@ export class RegisterPage implements OnInit {
   registrarUsuario() {}
   
   registrar( ) {
-    const password = this.registrarUsuario.value.password;
-    const repetirPassword = this.registrarUsuario.value.password;
-    const email= this.registrarUsuario.value.password;
+      const password = this.formularioRegistro.value.contraseña;
+      const repetirPassword = this.formularioRegistro.value.repetirPassword;
+      const email = this.formularioRegistro.value.correo; 
+
+      if (password !== repetirPassword){
+        const alert = this.alertController.create({
+          header: 'La contraseña no coincide',
+          message: 'Reintente nuevamente.',
+          buttons: ['ACEPTAR'],
+        });
+        alert.then(b => b.present());
+        return;
+      }
+  
 
     this.afAuth.createUserWithEmailAndPassword(password, email).then((user) =>{
-      console.log(user);
+      console.log('Usuario registrado con exito',user);
       
     }).catch((error) =>{
-      console.log(error);
+      console.log('Intente con otro usuario', error);
     })
   }
 }
