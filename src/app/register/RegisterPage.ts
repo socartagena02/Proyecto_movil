@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators,  } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { error } from 'console';
 
 
 
@@ -14,16 +16,18 @@ export class RegisterPage implements OnInit {
   formularioRegistro: FormGroup;
 
   constructor(public FormBuilder: FormBuilder,
-    public alertController: AlertController) {
+    public alertController: AlertController, 
+    private afAuth : AngularFireAuth) {
     this.formularioRegistro = this.FormBuilder.group({
-      'nombre': new FormControl("", Validators.required),
-      'apellido': new FormControl("", Validators.required),
-      'contraseña': new FormControl("", Validators.required),
-      'Nickname': new FormControl("", Validators.required),
+      'nombre': ['', Validators.required],
+      'apellido': ['', Validators.required],
+      'contraseña': ['', Validators.required],
+      'Nickname': ['', Validators.required],
+      'repetirPassword': ['', Validators.required],
     });
   }
-
-  ngOnInit() {
+  
+  ngOnInit(): void {
   }
   async guardar() {
     var formulario = this.formularioRegistro.value;
@@ -38,7 +42,7 @@ export class RegisterPage implements OnInit {
       await alert.present();
       return;
 
-    } else if (this.formularioRegistro.valid) { //Parece que ignora este else cuando se hace el ejemplo
+    } else if (this.formularioRegistro.valid) { 
       const alert = await this.alertController.create({
         header: 'datos completadoss',
         message: 'Vuelve al inicio para iniciar sesion',
@@ -59,46 +63,19 @@ export class RegisterPage implements OnInit {
       }
       localStorage.setItem('usuario', JSON.stringify(usuario))
     }
+  }
+  registrarUsuario() {}
+  
+  registrar( ) {
+    const password = this.registrarUsuario.value.password;
+    const repetirPassword = this.registrarUsuario.value.password;
+    const email= this.registrarUsuario.value.password;
 
-    //El codígo valida el correo que este correcto
-  //   class RegisterPage {
-  //     Correo: string = 'correo@ejemplo.com';
-  //     formularioRegistro: any;
-  //     constructor() {
-  //       this.Correo = 'Correo';
-  //     }
-
-  //     validarCorreo(correo: String): Boolean {
-  //       const correoPrimitivo = correo.toString();
-  //       const expresionRegular = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}(?:\.es)?$/;
-  //       return expresionRegular.test(correoPrimitivo);
-  //     }
-
-  //     //Aqui cuando el campo del correo esta vacio
-  //     correoVacio(correo: string): boolean {
-  //       return correo.trim() === "";
-  //     }
-  //     campoCorreoVacio() {
-  //       const correoVacio = this.formularioRegistro.invalid('correo').null; //formularioRegistro al parecer no esta definida mientras que lo esta en la linea 14
-  //       if (this.correoVacio(this.Correo)) {
-  //         console.log('El campo esta vacio');
-  //       } else {
-  //         return;
-  //       }
-  //     }
-
-  //     validarYMostrarCorreo() {
-  //       if (this.Correo) {
-  //         if (this.validarCorreo(this.Correo)) {
-  //           console.log('Correo electrónico válido');
-  //         }
-  //       } else {
-  //         console.log('Campo de correo electrónico vacío');
-  //       }
-  //       const registerPage = new RegisterPage();
-  //       registerPage.validarYMostrarCorreo();
-  //     }
-  //   }
-  // }
+    this.afAuth.createUserWithEmailAndPassword(password, email).then((user) =>{
+      console.log(user);
+      
+    }).catch((error) =>{
+      console.log(error);
+    })
   }
 }

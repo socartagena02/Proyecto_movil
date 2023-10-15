@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  datos_storage
+//  datos_storage
   constructor() {}
 }
