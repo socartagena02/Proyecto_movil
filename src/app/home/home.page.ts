@@ -2,6 +2,9 @@ import { state, style, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+//import { toastrService } from 'ngx Toastr';
+//import { FirebaseCodeErrorService } from 'src/app/services/Firebase code error.service';
 
 
 @Component({
@@ -14,17 +17,22 @@ export class HomePage {
   inicioSesion: FormGroup;
 
   constructor(private alertController: AlertController,
+    private afAuth : AngularFireAuth,
+//    private toastr : toastrService,
+//    private fireBaseError: FirebaseCodeErrorService, 
     public fb : FormBuilder) {
+
     this.inicioSesion = this.fb.group({
       'Nickname' : new FormControl ("", Validators.required),
       'contraseña': new FormControl("", Validators.required),
     });
   }
-  ngOnInit(){
+  ngOnInit():void{
 
   }
-
-  async confirmar(): Promise<void> {
+  
+  async confirmar(): Promise<void> {}
+  /*
     if(this.inicioSesion.invalid){
       const alert = await this.alertController.create({
         header: 'datos incompletos',
@@ -35,15 +43,14 @@ export class HomePage {
       await alert.present();
       return;
       
-    } //else { //Parece que ignora este else cuando se hace el ejemplo
-      //const alert = await this.alertController.create({
-  //       header: 'datos completados',
-  //       message: 'Vuelve al inicio para iniciar sesion',
-  //       buttons: ['OK'],
-  //     })
+    } else { 
+      const complete = await this.alertController.create({
+         header: 'datos completados',
+         buttons: ['OK'],
+       });
 
-  //   await alert.present();
-  //   return;
-  //  } 
+     await complete.present();
+     return;
+    } 
+    */
  }
-}
