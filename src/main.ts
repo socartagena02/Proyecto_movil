@@ -13,21 +13,21 @@ if (environment.production) {
   enableProdMode();
 }
 
-bootstrapApplication(AppComponent, {
-  providers : [{
-    provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-    importProvidersFrom(IonicModule.forRoot({})),
+// bootstrapApplication(AppComponent, {
+//   providers : [{
+//     provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+//     importProvidersFrom(IonicModule.forRoot({})),
 
-    importProvidersFrom(IonicStorageModule.forRoot({
-      name: 'testdb',
-      driverOrder: [Drivers.IndexedDB]
-    })
-    ),
+//     importProvidersFrom(IonicStorageModule.forRoot({
+//       name: 'testdb',
+//       driverOrder: [Drivers.IndexedDB]
+//     })
+//     ),
 
-    providesRouter('routes'),
+//     providesRouter('routes'),
   
-  ]
-})
+//   ]
+// })
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));

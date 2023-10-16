@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators,  } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { error } from 'console';
 
 
 
@@ -14,6 +13,7 @@ import { error } from 'console';
 export class RegisterPage implements OnInit {
 
   formularioRegistro: FormGroup;
+  
 
   constructor(public FormBuilder: FormBuilder,
     public alertController: AlertController, 
@@ -87,6 +87,8 @@ export class RegisterPage implements OnInit {
       
     }).catch((error) =>{
       console.log('Intente con otro usuario', error);
+
+      return error;
     })
   }
 }

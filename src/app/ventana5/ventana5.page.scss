@@ -32,8 +32,8 @@
     box-sizing: border-box;
   }
   
-  .form-register{
-    width: 400px;
+  .form-viaje{
+    width: 600px;
     background: #24303c;
     padding: 30px;
     margin: auto;
@@ -41,6 +41,7 @@
     border-radius:4px;
     font-family:'calibri';
     color: white;
+    position: center;
   }
   
   .form-register h4{
@@ -56,3 +57,9 @@
     font-size: 18px;
   
   }
+
+  .mapa{
+    width: 500px;
+    border-radius:4px;
+  }
+ 
