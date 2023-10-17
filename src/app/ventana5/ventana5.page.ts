@@ -15,7 +15,15 @@ export class Ventana5Page implements OnInit {
 
   ngOnInit() : void{
   }
-  pagar(){
+  isAlertOpen = false;
+  public alertButtons = ['OK'];
+
+  setOpen(isOpen: boolean) {
+    this.isAlertOpen = isOpen;
+  }
+  
+  botonConfirmar(){
 
   }
 }
+

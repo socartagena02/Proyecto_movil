@@ -30,6 +30,27 @@
   </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!--290 x km = $precio Precio por distancia
+  90 x min =  $precio Precio por tiempo
+  precioDistancia + precioTiempo + 500 (Tarifa base) = $precioTotal -->
+  <ion-list lines="full">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Limache-Olmue</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Tiempo: 15 min
+        </div>
+        <div class="ion-padding" slot="content">
+          Distancia: 9.3km
+        </div>
+        <div class="ion-padding" slot="content">
+          Pago: $4.547
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
   <ion-list lines="full">
     <ion-accordion-group>
       <ion-accordion value="first">
@@ -37,14 +58,13 @@
           <ion-label>Limache-Villa Alemana</ion-label>
         </ion-item>
         <div class="ion-padding" slot="content">
-          1 persona: $550
+          Tiempo: 21 min
         </div>
         <div class="ion-padding" slot="content">
-          2 personas: $850
-
+          Distancia: 17km
         </div>
         <div class="ion-padding" slot="content">
-          3 personas: $1000
+          Pago: $11.520
         </div>
       </ion-accordion>
     </ion-accordion-group>
@@ -56,14 +76,13 @@
           <ion-label>Limache-Belloto</ion-label>
         </ion-item>
         <div class="ion-padding" slot="content">
-          1 persona: $750
+          Tiempo: 21 min
         </div>
         <div class="ion-padding" slot="content">
-          2 personas: $1050
-
+          Distancia: 21.5 km
         </div>
         <div class="ion-padding" slot="content">
-          3 personas: $1150
+          Pago: $8.625
         </div>
       </ion-accordion>
     </ion-accordion-group>
@@ -75,14 +94,14 @@
           <ion-label>Limache-Quilpue</ion-label>
         </ion-item>
         <div class="ion-padding" slot="content">
-          1 persona: $950
+          Tiempo: 23 min
         </div>
         <div class="ion-padding" slot="content">
-          2 personas: $950
+          Distancia: 21.4 km 
 
         </div>
         <div class="ion-padding" slot="content">
-          3 personas: $1050
+          Pago: $8.276
         </div>
       </ion-accordion>
     </ion-accordion-group>
@@ -94,14 +113,49 @@
           <ion-label>Limache-Viña Del Mar</ion-label>
         </ion-item>
         <div class="ion-padding" slot="content">
-          1 persona: $1050
+          Tiempo: 33 min 
         </div>
         <div class="ion-padding" slot="content">
-          2 personas: $1150
-
+          Distancia: 33.4 km 
         </div>
         <div class="ion-padding" slot="content">
-          3 personas: $1250
+          Pago: $13.076
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+  <ion-list lines="full">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Limache-Valparaiso</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Tiempo: 42 min
+        </div>
+        <div class="ion-padding" slot="content">
+          Distancia: 39.5 km 
+        </div>
+        <div class="ion-padding" slot="content">
+          Pago: $15.730
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+  <ion-list lines="full">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Limache-Concon</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Tiempo: 43 min
+        </div>
+        <div class="ion-padding" slot="content">
+          Distancia: 47.6 km 
+        </div>
+        <div class="ion-padding" slot="content">
+          Pago: $18.174
         </div>
       </ion-accordion>
     </ion-accordion-group>
@@ -110,6 +164,6 @@
   <div class="cotizarViaje">
     Si no te encuentras por algunas de estas comunas, cotiza aquí:
     <br>
-    <ion-button [routerLink]="['/ventana3']">cotizar viajes</ion-button>
+    <ion-button [routerLink]="['/ventana5']">cotizar viajes</ion-button>
   </div>
 </ion-content>

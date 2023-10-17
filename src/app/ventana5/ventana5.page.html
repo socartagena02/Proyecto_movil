@@ -28,7 +28,6 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-
    <!--contenido-->
   <section class="form-viaje">
     <h4>realizar viajes</h4>
@@ -41,8 +40,28 @@
     <h6>precio</h6>
     <ion-input label="precio" type= "number" label-placement="floating" fill="outline" placeholder="Ingrese precio"></ion-input>
     <br>
+    <ion-list>
+      <ion-item>
+        <ion-select aria-label="Conductor" placeholder="Seleccione un Conductor">
+          <ion-select-option value="conductor1">Carla Chaparro</ion-select-option>
+          <ion-select-option value="conductor2">Justo Nieves</ion-select-option>
+          <ion-select-option value="conductor3">Hector Palomo</ion-select-option>
+          <ion-select-option value="conductor4">Vicente Novo</ion-select-option>
+          <ion-select-option value="conductor5">Rafael Quiroz</ion-select-option>
+          <ion-select-option value="conductor6">Jose Angel España</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <br>
     <div class="confirmarViaje2">
-      <ion-button (click)= "pagar()">pagar</ion-button>
+      <ion-button class="botonConfirmar"(click)="setOpen(true)">Confirmar</ion-button>
+      <ion-alert
+        [routerLink]="['/ventana3']"
+        [isOpen]="isAlertOpen"
+        header="Se redigira al inicio"
+        [buttons]="alertButtons"
+        (didDismiss)="setOpen(false)">
+      </ion-alert>
     </div>
   </section>
 
