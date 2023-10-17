@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Ventana3Page } from 'src/app/ventana3/ventana3.page';
+
 
 @Component({
   selector: 'app-ventana5',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Ventana5Page implements OnInit {
 
-  constructor() { }
+  constructor() { 
 
-  ngOnInit() {
   }
 
+  ngOnInit() : void{
+  }
+  pagar(){
+
+  }
 }

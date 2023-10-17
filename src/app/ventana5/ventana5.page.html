@@ -8,6 +8,8 @@
     <br>
     <ion-button [routerLink]="['/ventana5']" fill="clear">realizar viaje</ion-button>
     <br>
+    <ion-button [routerLink]="['/tarifas']"fill="clear">Tarifas</ion-button>
+    <br>
     <ion-button [routerLink]="['/ventana6']"fill="clear">configuracion </ion-button>
     <br>
     <ion-button [routerLink]="['/ventana7']"fill="clear">quienes somos</ion-button>
@@ -27,15 +29,9 @@
     </ion-toolbar>
   </ion-header>
 
-
-  <div class="confirmarViaje">
-    <ion-button [routerLink]="['/ventana3']"> confirmar viaje</ion-button>
-  </div>
+   <!--contenido-->
   <section class="form-viaje">
     <h4>realizar viajes</h4>
-    <h6>nombre de usuario</h6>
-    <ion-input label="nombre de usuario" label-placement="floating" fill="outline" placeholder="Ingrese nombre"></ion-input>
-    <br>
     <h6>Punto de partida</h6>
     <ion-input label="ubicación" label-placement="floating" fill="outline" placeholder="Ingrese ubicación"></ion-input>
     <br>
@@ -45,11 +41,9 @@
     <h6>precio</h6>
     <ion-input label="precio" type= "number" label-placement="floating" fill="outline" placeholder="Ingrese precio"></ion-input>
     <br>
-    <div class='mapa'>
-      <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.86508698157!2d-71.53575902412106!3d-33.03368467629028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689de64d74fd4af%3A0x8004f381e9055a38!2sDuoc%20UC%3A%20Sede%20Vi%C3%B1a%20Del%20Mar!5e0!3m2!1ses!2scl!4v1696268643549!5m2!1ses!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>  
-    
-    <br>
+    <div class="confirmarViaje2">
+      <ion-button (click)= "pagar()">pagar</ion-button>
+    </div>
   </section>
 
 

@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'reset-password',
     loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
   },
+  {
+    path: 'tarifas',
+    loadChildren: () => import('./tarifas/tarifas.module').then( m => m.TarifasPageModule)
+  },
 
 ];
 
