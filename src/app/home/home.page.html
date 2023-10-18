@@ -11,26 +11,27 @@
 
 <ion-content [fullscreen]="true" class="fondohome">
   <div class="inicioSesion">
-    <section class="form-register">
-      <h4>Iniciar Sesion</h4>
-      <h6>Nombre usuario</h6>
-      <ion-input label="nombre de usuario" label-placement="floating" fill="outline" placeholder="Ingrese nombre"></ion-input>
-      <h6>contraseña</h6>
-      <ion-input label="contraseña" type="password" label-placement="floating" fill="outline" placeholder="Ingresa contraseña"></ion-input>
-      <br>
-      <div>
-        <a [routerLink]="['/reset-password']">¿Olvidaste tu contraseña?</a>
-      </div>
-      <br>
-      <div class="boton">
-        <ion-button [routerLink]="['/ventana3']" (click)= "confirmar()">confirmar</ion-button>
-      </div>
-      <br>
-      <p>si no tienes cuenta haz click aqui o deseas activarla porfavor presione aqui: </p>
-      <div class="boton2">
-        <ion-button [routerLink]="['/register']">Registrar</ion-button>
-      </div>
-    </section>
+    <form class="form-register">
+        <h1>Iniciar Sesion</h1>
+        <h4>Usuario</h4>
+        <ion-input label="nombre de usuario" label-placement="floating" fill="solid" placeholder="Ingrese nombre"></ion-input>
+        <br>
+        <h4>contraseña</h4>
+        <ion-input label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingresa contraseña"></ion-input>
+        <br>
+        <div>
+          <a [routerLink]="['/reset-password']">¿Olvidaste tu contraseña?</a>
+        </div>
+        <br>
+        <div class="boton">
+          <ion-button [routerLink]="['/ventana3']" (click)= "confirmar()">confirmar</ion-button>
+        </div>
+        <br>
+        <p>si no tienes cuenta haz click aqui o deseas activarla porfavor presione aqui: </p>
+        <div class="boton2">
+          <ion-button [routerLink]="['/register']">Registrar</ion-button>
+        </div>
+    </form>
   </div>
 </ion-content>
 

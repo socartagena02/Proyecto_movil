@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -34,18 +33,21 @@
 
 .form-register{
   width: 400px;
-  background: #24303c;
+  background: whitesmoke;
   padding: 30px;
   margin: auto;
   margin-top: 100px;
   border-radius:4px;
   font-family:'calibri';
-  color: white;
+  color: black;
 }
 
-.form-register h4{
+
+.form-register h1{
  font-size: 22px;
  margin-bottom: 20px;
+ text-align: center;
+
 }
 
 .controls{
