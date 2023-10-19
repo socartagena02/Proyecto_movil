@@ -19,11 +19,11 @@ export class RegisterPage implements OnInit {
     public alertController: AlertController, 
     private afAuth : AngularFireAuth) {
     this.formularioRegistro = this.FormBuilder.group({
-      'nombre': ['', Validators.required],
-      'apellido': ['', Validators.required],
-      'contraseña': ['', Validators.required],
-      'Nickname': ['', Validators.required],
-      'repetirPassword': ['', Validators.required],
+      'nombre': new FormControl ("", Validators.required),
+      'apellido': new FormControl ("", Validators.required),
+      'Nickname' : new FormControl ("", Validators.required),
+      'contraseña': new FormControl("", Validators.required),
+      'repetirPassword': new FormControl ("", Validators.required)
     });
   }
   

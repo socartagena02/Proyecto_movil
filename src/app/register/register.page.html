@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>register</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,25 +13,20 @@
 
   <section class="form-register">
     <h1>Registrar Usuario</h1>
-    <h3>Nombre</h3>
-    <ion-input label="nombre" label-placement="floating" fill="solid" placeholder="Ingrese nombre"></ion-input>
+    <ion-input label="nombre" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Nombre</ion-input>
     <br>
-    <h3>Apellido</h3>
-    <ion-input label="apellido" label-placement="floating" fill="solid" placeholder="Ingrese apellido"></ion-input>
+    
+    <ion-input label="apellido" label-placement="floating" fill="solid" placeholder="Ingrese apellido">apellido</ion-input>
     <br>
-    <h3>Contraseña</h3>
-    <ion-input label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña"></ion-input>
+    
+    <ion-input label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">contraseña</ion-input>
     <br>
-    <h3>Nickname</h3>
-    <ion-input label="Nickname" label-placement="floating" fill="solid" placeholder="Ingrese apodo"></ion-input>
+    
+    <ion-input label="Nickname" label-placement="floating" fill="solid" placeholder="Ingrese apodo">Username</ion-input>
     <br>
     <ion-button (click)= "guardar()" >Guardar</ion-button>
-    <br>
-    <br>
-    <p> ¿Tienes cuenta? haz click aqui:</p>
-    <ion-button [routerLink]="['/home']">Iniciar Sesion</ion-button> 
-    
   </section>
 
 </ion-content>
 
+<ion-button [routerLink]="['/home']">Iniciar Sesion</ion-button> 

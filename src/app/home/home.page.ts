@@ -31,8 +31,8 @@ export class HomePage {
 
   }
   
-  async confirmar(): Promise<void> {}
-  /*
+  async confirmar() {
+  
     if(this.inicioSesion.invalid){
       const alert = await this.alertController.create({
         header: 'datos incompletos',
@@ -43,14 +43,16 @@ export class HomePage {
       await alert.present();
       return;
       
-    } else { 
-      const complete = await this.alertController.create({
-         header: 'datos completados',
-         buttons: ['OK'],
-       });
+    // } else { 
+    //   const complete = await this.alertController.create({
+    //      header: 'datos completados',
+    //      buttons: ['OK'],
+    //    });
 
-     await complete.present();
-     return;
-    } 
-    */
+    //  await complete.present();
+    //  return;
+    // } 
+    
+  }
  }
+}

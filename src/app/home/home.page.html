@@ -1,6 +1,6 @@
 
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       DuocMovil
     </ion-title>
@@ -11,27 +11,21 @@
 
 <ion-content [fullscreen]="true" class="fondohome">
   <div class="inicioSesion">
-    <form class="form-register">
+    <form [formGroup]="inicioSesion">
         <h1>Iniciar Sesion</h1>
-        <h4>Usuario</h4>
-        <ion-input label="nombre de usuario" label-placement="floating" fill="solid" placeholder="Ingrese nombre"></ion-input>
+        <ion-input formControlNickname="Nickname" label="nombre de usuario" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Usuario</ion-input>
         <br>
-        <h4>contraseña</h4>
-        <ion-input label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingresa contraseña"></ion-input>
+        <ion-input formControlcontraseña="contraseña" label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingresa contraseña">Contraseña</ion-input>
         <br>
         <div>
           <a [routerLink]="['/reset-password']">¿Olvidaste tu contraseña?</a>
         </div>
         <br>
         <div class="boton">
-          <ion-button [routerLink]="['/ventana3']" (click)= "confirmar()">confirmar</ion-button>
-        </div>
-        <br>
-        <p>si no tienes cuenta haz click aqui o deseas activarla porfavor presione aqui: </p>
-        <div class="boton2">
-          <ion-button [routerLink]="['/register']">Registrar</ion-button>
+          <ion-button (click)= "confirmar()">confirmar</ion-button>
         </div>
     </form>
   </div>
 </ion-content>
+<ion-button [routerLink]="['/register']">Registrar</ion-button>
 
