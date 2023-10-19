@@ -10,23 +10,22 @@
       <ion-title size="large">register</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <section class="form-register">
-    <h1>Registrar Usuario</h1>
-    <ion-input label="nombre" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Nombre</ion-input>
-    <br>
-    
-    <ion-input label="apellido" label-placement="floating" fill="solid" placeholder="Ingrese apellido">apellido</ion-input>
-    <br>
-    
-    <ion-input label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">contraseña</ion-input>
-    <br>
-    
-    <ion-input label="Nickname" label-placement="floating" fill="solid" placeholder="Ingrese apodo">Username</ion-input>
-    <br>
-    <ion-button (click)= "guardar()" >Guardar</ion-button>
-  </section>
-
+    <div class="registrarUsuario">
+      <form [formGroup]="formularioRegistro">
+        <h1>Registrar Usuario</h1>
+        <ion-input formControlnombre="nombre" label="nombre" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Nombre</ion-input>
+        <br>
+        <ion-input formControlapellido="apellido" label="apellido" label-placement="floating" fill="solid" placeholder="Ingrese apellido">apellido</ion-input>
+        <br>
+        <ion-input formControlNickname="Nickname"  label="username" label-placement="floating" fill="solid" placeholder="Ingrese apodo">Username</ion-input>
+        <br>
+        <ion-input formControlcontraseña="contraseña" label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">contraseña</ion-input>
+        <br>
+        <ion-input formControlrepetirPassword="repetirPassword" label="repetir contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">Repetir contraseña</ion-input>
+        <br>
+        <ion-button (click)= "guardar()" >Guardar</ion-button>
+      </form>
+    </div>  
 </ion-content>
 
 <ion-button [routerLink]="['/home']">Iniciar Sesion</ion-button> 

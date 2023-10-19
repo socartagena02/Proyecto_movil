@@ -4,8 +4,8 @@ import { RouteReuseStrategy } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
-import { AngularFireModule } from '@angular/fire/compat'
-
+import { AngularFireModule } from '@angular/fire/compat';
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -25,6 +25,7 @@ import { environment } from 'src/environments/environment';
     FormsModule, 
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)],
+    
   
     providers: [{ provide: RouteReuseStrategy, 
     useClass: IonicRouteStrategy }],
