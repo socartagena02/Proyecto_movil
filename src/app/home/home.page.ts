@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-//import { toastrService } from 'ngx Toastr';
-//import { FirebaseCodeErrorService } from 'src/app/services/Firebase code error.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,13 +17,12 @@ export class HomePage {
 
   constructor(private alertController: AlertController,
     private afAuth : AngularFireAuth,
-//    private toastr : toastrService,
-//    private fireBaseError: FirebaseCodeErrorService, 
-    public fb : FormBuilder) {
+    public fb : FormBuilder,
+    private router: Router) {
 
     this.inicioSesion = this.fb.group({
-      'Nickname' : new FormControl ("", Validators.required),
-      'contraseña': new FormControl("", Validators.required),
+      'Nickname' : ["",[Validators.required, Validators.pattern(/^[a-zA-Z0-9]*$/)], Validators.minLength(3), Validators.maxLength(12)],
+      'contrasena': ["",[Validators.required,  Validators.minLength(3), Validators.maxLength(12)]],
     });
   }
   ngOnInit():void{
@@ -36,23 +34,38 @@ export class HomePage {
     if(this.inicioSesion.invalid){
       const alert = await this.alertController.create({
         header: 'datos incompletos',
-        message: 'tienes que completar el formulario porfavor',
+        message: 'Ingrese datos correspondidos',
         buttons: ['OK'],
       });
   
       await alert.present();
-      return;
-      
-    // } else { 
-    //   const complete = await this.alertController.create({
-    //      header: 'datos completados',
-    //      buttons: ['OK'],
-    //    });
-
-    //  await complete.present();
-    //  return;
-    // } 
-    
+    } else { 
+      const complete = await this.alertController.create({
+        header: 'Inicie sesion porfavor',
+          buttons:  [
+            {
+              text: 'OK',
+              handler: () => {
+                this.router.navigate(['/ventana3']);
+              }
+            }
+          ]
+       });
+     await complete.present();
   }
  }
+ validarContrasena(contrasena: string): boolean {
+  //const caracteresEspeciales = /[!@#$%^&*()_+{}[\]:;<>,.?~\\-=|/]/;
+  const longitudMinima = 8;
+  const longitudMaxima = 12;
+
+    if (contrasena.length < longitudMinima) {
+      return false;
+    }
+
+    //if (!caracteresEspeciales.test(contrasena)) {
+    //  return false;
+    //}
+    return true; 
+  }
 }
