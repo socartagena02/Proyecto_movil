@@ -13,22 +13,9 @@
   <div class="inicioSesion">
     <form [formGroup]="inicioSesion">
         <h1>Iniciar Sesion</h1>
-        <ion-input formControlNickname="Nickname" label="nombre de usuario" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Usuario</ion-input>
-        <!--
-        <div *ngIF="formulario.get('Nickname').hasError('required')">
-          El nombre de usuario es requerido
-        </div>
-        <div *ngIF="formulario.get('Nickname').hasError('pattern')">
-          El nombre de usuario debe tener con nombre y números
-        </div>
-        <div *ngIF="formulario.get('Nickname').hasError('minLength')">
-          El nombre de usuario debe tener un minimo de 3 caracteres
-        </div>
-        <div *ngIF="formulario.get('Nickname').hasError('maxLength')"> Por si se sobre pasa
-          El nombre de usuario debe tener un maximo de 12 caracteres
-        </div>-->
+        <ion-input formControlname="Nickname" label="nombre de usuario" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Usuario</ion-input>
         <br>
-        <ion-input formControlcontraseña="contraseña" label="contraseña" type="password" id="password" label-placement="floating" fill="solid" placeholder="Ingresa contraseña">Contraseña</ion-input>
+        <ion-input formControlname="contraseña" label="contraseña" type="password" id="password" label-placement="floating" fill="solid" placeholder="Ingresa contraseña">Contraseña</ion-input>
         <br>
         <div>
           <a [routerLink]="['/reset-password']">¿Olvidaste tu contraseña?</a>
@@ -39,7 +26,6 @@
         </div>
     </form>
   </div>
-  <ion-button [routerLink]="['/register']">Registrar</ion-button>
 </ion-content>
-
+<ion-button [routerLink]="['/register']">Registrar</ion-button>
 
