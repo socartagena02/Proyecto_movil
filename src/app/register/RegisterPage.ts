@@ -30,7 +30,7 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
   async guardar() {
-    console.log(formulario);
+    
     var formulario = this.formularioRegistro.value;
     let usuario = {
       nombre: formulario.nombre,

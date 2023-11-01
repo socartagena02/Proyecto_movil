@@ -13,9 +13,9 @@
   <div class="inicioSesion">
     <form [formGroup]="inicioSesion">
         <h1>Iniciar Sesion</h1>
-        <ion-input formControlname="Nickname" label="nombre de usuario" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Usuario</ion-input>
+        <ion-input formControlName="Nickname" label="nombre de usuario" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Usuario</ion-input>
         <br>
-        <ion-input formControlname="contraseña" label="contraseña" type="password" id="password" label-placement="floating" fill="solid" placeholder="Ingresa contraseña">Contraseña</ion-input>
+        <ion-input formControlName="contrasena" label="contraseña" type="password" id="password" label-placement="floating" fill="solid" placeholder="Ingresa contraseña">Contraseña</ion-input>
         <br>
         <div>
           <a [routerLink]="['/reset-password']">¿Olvidaste tu contraseña?</a>

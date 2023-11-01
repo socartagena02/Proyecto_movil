@@ -30,42 +30,21 @@ export class HomePage {
   }
   
   async confirmar() {
-  
-    if(this.inicioSesion.invalid){
+    var form = this.inicioSesion.value;
+
+    var usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
+
+    if(usuario.nombre == form.nombre && usuario.contraseña == form.contraseña){
+      console.log('ingresado');
+
+    }else{
       const alert = await this.alertController.create({
-        header: 'datos incompletos',
-        message: 'Ingrese datos correspondidos',
+        header: 'datos incorrectos',
+        message: 'intentelo de nuevo',
         buttons: ['OK'],
       });
-  
-      await alert.present();
-    } else { 
-      const complete = await this.alertController.create({
-        header: 'Inicie sesion porfavor',
-          buttons:  [
-            {
-              text: 'OK',
-              handler: () => {
-                this.router.navigate(['/ventana3']);
-              }
-            }
-          ]
-       });
-     await complete.present();
-  }
- }
- validarContrasena(contrasena: string): boolean {
-  //const caracteresEspeciales = /[!@#$%^&*()_+{}[\]:;<>,.?~\\-=|/]/;
-  const longitudMinima = 8;
-  const longitudMaxima = 12;
-
-    if (contrasena.length < longitudMinima) {
-      return false;
+      alert.present();
     }
-
-    //if (!caracteresEspeciales.test(contrasena)) {
-    //  return false;
-    //}
-    return true; 
+    
   }
 }

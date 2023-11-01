@@ -13,15 +13,15 @@
     <div class="registrarUsuario">
       <form [formGroup]="formularioRegistro">
         <h1>Registrar Usuario</h1>
-        <ion-input formControlname="nombre" label="nombre" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Nombre</ion-input>
+        <ion-input formControlName="nombre" label="nombre" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Nombre</ion-input>
         <br>
-        <ion-input formControlname="apellido" label="apellido" label-placement="floating" fill="solid" placeholder="Ingrese apellido">apellido</ion-input>
+        <ion-input formControlName="apellido" label="apellido" label-placement="floating" fill="solid" placeholder="Ingrese apellido">apellido</ion-input>
         <br>
-        <ion-input formControlname="Nickname"  label="username" label-placement="floating" fill="solid" placeholder="Ingrese apodo">Username</ion-input>
+        <ion-input formControlName="Nickname"  label="username" label-placement="floating" fill="solid" placeholder="Ingrese apodo">Username</ion-input>
         <br>
-        <ion-input formControlname="contraseña" label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">contraseña</ion-input>
+        <ion-input formControlName="contraseña" label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">contraseña</ion-input>
         <br>
-        <ion-input formControlname="repetirPassword" label="repetir contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">Repetir contraseña</ion-input>
+        <ion-input formControlName="repetirPassword" label="repetir contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">Repetir contraseña</ion-input>
         <br>
         <ion-button (click)= "guardar()" >Guardar</ion-button>
       </form>
