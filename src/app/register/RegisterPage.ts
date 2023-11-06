@@ -3,8 +3,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { AlertController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
-
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -22,13 +20,14 @@ export class RegisterPage implements OnInit {
       'nombre': new FormControl("", Validators.required),
       'apellido': new FormControl("", Validators.required),
       'Nickname': new FormControl("", Validators.required),
-      'contraseña': new FormControl("", Validators.required),
-      'repetirPassword': new FormControl("", Validators.required)
+      'contraseña': ['', [Validators.required, Validators.minLength(8), Validators.maxLength(12)]],
+      'repetirPassword': ['', [Validators.required, Validators.minLength(8), Validators.maxLength(12)]]
     });
   }
 
   ngOnInit() {
   }
+ 
   async guardar() {
     
     var formulario = this.formularioRegistro.value;
@@ -39,8 +38,7 @@ export class RegisterPage implements OnInit {
       contraseña: formulario.contraseña,
       repetirpassword: formulario.repetirPassword
     }
-
-    //    
+    
     if (this.formularioRegistro.valid) {
 
       const alert = await this.alertController.create({
@@ -61,10 +59,10 @@ export class RegisterPage implements OnInit {
       alert.present();
 
     }
-
-
     localStorage.setItem('usuario', JSON.stringify(usuario))
-
   }
-
+  saveData(){
+    console.log(this.formularioRegistro.value);
+  }
+  
 }

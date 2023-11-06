@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'tarifas',
     loadChildren: () => import('./tarifas/tarifas.module').then( m => m.TarifasPageModule)
   },
+  {
+    path: 'firebase',
+    loadChildren: () => import('./firebase/firebase.module').then( m => m.FirebasePageModule)
+  },
 
 ];
 
