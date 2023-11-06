@@ -11,20 +11,20 @@
 
 <ion-content [fullscreen]="true" class="fondohome">
   <div class="inicioSesion">
-    <form [formGroup]="inicioSesion">
+    <form [formGroup]="inicioSesion" novalidate>
         <h1>Iniciar Sesion</h1>
         <ion-input formControlName="Nickname" label="nombre de usuario" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Usuario</ion-input>
         <br>
         <ion-input formControlName="contrasena" label="contraseña" type="password" id="password" label-placement="floating" fill="solid" placeholder="Ingresa contraseña">Contraseña</ion-input>
         <br>
+        
         <div>
           <a [routerLink]="['/reset-password']">¿Olvidaste tu contraseña?</a>
         </div>
         <br>
-        <div class="boton">
-          <ion-button (click)= "confirmar()">confirmar</ion-button>
-        </div>
+       
     </form>
+    
   </div>
 </ion-content>
 <ion-button [routerLink]="['/register']">Registrar</ion-button>
