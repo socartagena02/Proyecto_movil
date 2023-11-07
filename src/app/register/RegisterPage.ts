@@ -20,10 +20,21 @@ export class RegisterPage implements OnInit {
       'nombre': new FormControl("", Validators.required),
       'apellido': new FormControl("", Validators.required),
       'Nickname': new FormControl("", Validators.required),
-      'contraseña': ['', [Validators.required, Validators.minLength(8), Validators.maxLength(12)]],
-      'repetirPassword': ['', [Validators.required, Validators.minLength(8), Validators.maxLength(12)]]
+      'contraseña': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
+      'repetirPassword': ['', [Validators.required, Validators.minLength(8), Validators.maxLength(12)]],
+      'usuario': ["", [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$')]]
     });
   }
+
+  loginFuncion(){
+    var Nickname = this.formularioRegistro.get('Nickname')?.value;
+    var nombre = this.formularioRegistro.get('nombre')?.value;
+    var apellido = this.formularioRegistro.get('apellido')?.value;
+    var contraseña = this.formularioRegistro.get('contraseña')?.value;
+    var repetirPassword = this.formularioRegistro.get('repetirPassword')?.value;
+    
+  }
+
 
   ngOnInit() {
   }

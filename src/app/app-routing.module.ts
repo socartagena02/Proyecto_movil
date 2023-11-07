@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'firebase',
     loadChildren: () => import('./firebase/firebase.module').then( m => m.FirebasePageModule)
   },
+  {
+    path: 'formbuilder',
+    loadChildren: () => import('./formbuilder/formbuilder.module').then( m => m.FormbuilderPageModule)
+  },
 
 ];
 
