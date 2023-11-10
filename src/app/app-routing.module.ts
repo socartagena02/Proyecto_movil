@@ -50,6 +50,10 @@ const routes: Routes = [
     path: 'formbuilder',
     loadChildren: () => import('./formbuilder/formbuilder.module').then( m => m.FormbuilderPageModule)
   },
+  {
+    path: 'map',
+    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
+  },
 
 ];
 
