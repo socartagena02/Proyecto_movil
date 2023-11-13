@@ -76,4 +76,13 @@ export class RegisterPage implements OnInit {
     console.log(this.formularioRegistro.value);
   }
   
+  public contrasenasIguales():  boolean {
+    const contraseñaControl = this.formularioRegistro.get('contraseña');
+    const repetirContraseñaControl = this.formularioRegistro.get('repetirPassword');
+    return(
+      this.formularioRegistro.hasError('noSonIguales') &&
+      contraseñaControl?.dirty === true &&
+      repetirContraseñaControl?.dirty === true
+    );
+  }
 }

@@ -22,6 +22,7 @@
         <ion-input formControlName="contraseña" label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">contraseña</ion-input>
         <br>
         <ion-input formControlName="repetirPassword" label="repetir contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">Repetir contraseña</ion-input>
+        <mat-error *ngIf="contrasenasIguales()">Las contraseñas no coinciden</mat-error>
         <br>
         <ion-button (click)= "guardar()" >Guardar</ion-button>
       </form>

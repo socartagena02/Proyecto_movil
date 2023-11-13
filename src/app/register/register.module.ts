@@ -8,6 +8,9 @@ import { RegisterPageRoutingModule } from './register-routing.module';
 
 import { RegisterPage } from './RegisterPage';
 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   imports: [
@@ -15,7 +18,9 @@ import { RegisterPage } from './RegisterPage';
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    RegisterPageRoutingModule
+    RegisterPageRoutingModule, 
+    MatFormFieldModule,
+    MatInputModule
   ],
   declarations: [RegisterPage]
 })
