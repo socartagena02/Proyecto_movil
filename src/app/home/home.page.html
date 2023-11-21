@@ -13,7 +13,7 @@
   <div class="inicioSesion">
     <form [formGroup]="inicioSesion" novalidate>
         <h1>Iniciar Sesion</h1>
-        <ion-input formControlName="Nickname" label="nombre de usuario" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Usuario</ion-input>
+        <ion-input formControlName="email" label="correo" label-placement="floating" fill="solid" placeholder="Ingresar correo">correo</ion-input>
         <br>
         <ion-input formControlName="contrasena" label="contraseña" type="password" id="password" label-placement="floating" fill="solid" placeholder="Ingresa contraseña">Contraseña</ion-input>
         <br>
@@ -22,10 +22,11 @@
           <a [routerLink]="['/reset-password']">¿Olvidaste tu contraseña?</a>
         </div>
         <br>
-       
+        <ion-button [routerLink]="['/ventana3']">iniciar sesion</ion-button>
     </form>
     
   </div>
 </ion-content>
 <ion-button [routerLink]="['/register']">Registrar</ion-button>
+
 

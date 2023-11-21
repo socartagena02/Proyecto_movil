@@ -34,7 +34,8 @@ const routes: Routes = [
   {
     path: 'ventana7',
     loadChildren: () => import('./ventana7/ventana7.module').then( m => m.Ventana7PageModule)
-  },  {
+  },
+  {
     path: 'reset-password',
     loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
   },
@@ -42,14 +43,7 @@ const routes: Routes = [
     path: 'tarifas',
     loadChildren: () => import('./tarifas/tarifas.module').then( m => m.TarifasPageModule)
   },
-  {
-    path: 'firebase',
-    loadChildren: () => import('./firebase/firebase.module').then( m => m.FirebasePageModule)
-  },
-  {
-    path: 'formbuilder',
-    loadChildren: () => import('./formbuilder/formbuilder.module').then( m => m.FormbuilderPageModule)
-  },
+
   {
     path: 'map',
     loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)

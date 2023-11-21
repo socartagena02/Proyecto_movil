@@ -10,12 +10,14 @@
       <ion-title size="large">register</ion-title>
     </ion-toolbar>
   </ion-header>
-    <div class="registrarUsuario">
+    <ion-card class="registrarUsuario">
       <form [formGroup]="formularioRegistro">
         <h1>Registrar Usuario</h1>
         <ion-input formControlName="nombre" label="nombre" label-placement="floating" fill="solid" placeholder="Ingrese nombre">Nombre</ion-input>
         <br>
         <ion-input formControlName="apellido" label="apellido" label-placement="floating" fill="solid" placeholder="Ingrese apellido">apellido</ion-input>
+        <br>
+        <ion-input formControlName="emai" label="correo" label-placement="floating" fill="solid" placeholder="Ingresar correo">Correo</ion-input>
         <br>
         <ion-input formControlName="Nickname"  label="username" label-placement="floating" fill="solid" placeholder="Ingrese apodo">Username</ion-input>
         <br>
@@ -24,9 +26,14 @@
         <ion-input formControlName="repetirPassword" label="repetir contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">Repetir contraseña</ion-input>
         <mat-error *ngIf="contrasenasIguales()">Las contraseñas no coinciden</mat-error>
         <br>
+        <div>
+          <a [routerLink]="['/home']">¿ya estas registrado?</a>
+        </div>
+        <br>
         <ion-button (click)= "guardar()" >Guardar</ion-button>
       </form>
-    </div>  
+    </ion-card>
 </ion-content>
 
-<ion-button [routerLink]="['/home']">Iniciar Sesion</ion-button> 
+
+
