@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { User } from 'firebase/auth';
+//import { error } from 'console';
+//import { UtilsService } from 'path-to-your-utils-service';
+
 
 @Component({
   selector: 'app-register',
@@ -22,7 +26,8 @@ export class RegisterPage implements OnInit {
       'Nickname': new FormControl("", Validators.required),
       'contraseña': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
       'repetirPassword': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
-      'usuario': ["", [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$')]]
+      'usuario': ["", [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$')]],
+//      this:utilsSvc = new UtilsService()
     });
   }
 
@@ -84,5 +89,8 @@ export class RegisterPage implements OnInit {
       contraseñaControl?.dirty === true &&
       repetirContraseñaControl?.dirty === true
     );
+  }
+  async submit() {
+
   }
 }

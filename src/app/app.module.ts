@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+//import { provideFirebaseApp } from '@angular/fire/app';
+//import { getAuth } from 'firebase/auth';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,13 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     BrowserAnimationsModule,
     FormsModule, 
     ReactiveFormsModule,
+//    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+//    provideAuth(() => getAuth()),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule
+    // error solution NullInjectError
+//    AngularFireModule.initializeApp(environment.firebase)
 
   ],
 

@@ -7,7 +7,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { map, take, debounceTime } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { FirebaseService } from '../services/firebase.service';
+import { FirebaseService, /*AuthService*/ } from '../services/firebase.service';
 import { User } from '../models/user.model';
 
 
@@ -25,7 +25,8 @@ export class HomePage {
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
     public fb: FormBuilder,
-    private router: Router) {
+    private router: Router,
+    /*private authService: AuthService*/) {
 
     this.inicioSesion = this.fb.group({
       'email': ["", Validators.required],
@@ -40,16 +41,6 @@ export class HomePage {
   ngOnInit() {
 
   }
-
-  submit(){
-    if(this.inicioSesion.valid){
-      this.firebaseSvc.signIn(this.inicioSesion.value as User).then(res=> {
-        console.log(res)
-      })
-    }
-  }
-
-
 }
 
 
