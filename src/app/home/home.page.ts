@@ -1,3 +1,4 @@
+import {getAuth, signInWithEmailAndPassword} from 'firebase/auth';
 import { state, style, trigger } from '@angular/animations';
 import { Component, inject } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -7,6 +8,8 @@ import { Router } from '@angular/router';
 import { map, take, debounceTime } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FirebaseService } from '../services/firebase.service';
+import { User } from '../models/user.model';
+
 
 
 @Component({
@@ -32,11 +35,19 @@ export class HomePage {
 
   firebaseSvc = inject(FirebaseService);
   
+
+
   ngOnInit() {
 
   }
 
- 
+  submit(){
+    if(this.inicioSesion.valid){
+      this.firebaseSvc.signIn(this.inicioSesion.value as User).then(res=> {
+        console.log(res)
+      })
+    }
+  }
 
 
 }
