@@ -29,7 +29,7 @@ export class HomePage {
     /*private authService: AuthService*/) {
 
     this.inicioSesion = this.fb.group({
-      'email': ["", Validators.required],
+      'email': ["", Validators.required, Validators.email],
       'contrasena': ["", [Validators.required, Validators.minLength(3), Validators.maxLength(12)]],
     });
   }
