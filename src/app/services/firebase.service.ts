@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class FirebaseService {
-  
+  AuthService() {
+
+  }
   userData:any;
   
   constructor(
@@ -29,10 +31,22 @@ export class FirebaseService {
       }
     })
   }
+
   //Inicio de sesion con email y contraseña 
+  logInWithEmailAndPassword(email: string, contrasena: string) {
+    return this.firebaseAuthenticationService.signInWithEmailAndPassword(email, contrasena,)
+      .then((userCredential) => {
+        this.userData = userCredential.user
+        this.observeUserState()
+      })
+      .catch((error) => {
+        alert(error.message);
+      })
+  }
+  //Registro con email y contraseña 
   
-  signInWithEmailAndPassword(email: string, password: string, user:User) {
-    return this.firebaseAuthenticationService.signInWithEmailAndPassword(email, password)
+  signInWithEmailAndPassword(email: string, contrasena: string) {
+    return this.firebaseAuthenticationService.signInWithEmailAndPassword(email, contrasena)
     .then((UserCredential) => {
       this.userData =  UserCredential.user
       this.observeUserState() 
@@ -47,8 +61,8 @@ export class FirebaseService {
     })
   }
   //Registrar email y contra
-  signUpWithEmailAndPassword(email: string, password: string) {
-    return this.firebaseAuthenticationService.createUserWithEmailAndPassword(email, password)
+  signUpWithEmailAndPassword(email: string, contrasena: string) {
+    return this.firebaseAuthenticationService.createUserWithEmailAndPassword(email, contrasena)
       .then((userCredential) => {
         this.userData = userCredential.user
         this.observeUserState()
@@ -67,7 +81,7 @@ export class FirebaseService {
   logOut() {
     return this.firebaseAuthenticationService.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['login']);
+      this.router.navigate(['home']);
     })
   }
   
@@ -80,4 +94,5 @@ export class FirebaseService {
   return signInWithEmailAndPassword(getAuth(), user.email, user.password);
 
  }
+
 }

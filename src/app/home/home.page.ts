@@ -7,10 +7,13 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { map, take, debounceTime } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { FirebaseService, /*AuthService*/ } from '../services/firebase.service';
+import { FirebaseService } from '../services/firebase.service';
 import { User } from '../models/user.model';
 
-
+/*Nota para el profe:
+npm install firebase -force
+ionic serve -force
+*/
 
 @Component({
   selector: 'app-home',
@@ -20,13 +23,15 @@ import { User } from '../models/user.model';
 
 export class HomePage {
   inicioSesion: FormGroup;
+  email: string;
+  contrasena: string;
 
   constructor(private alertController: AlertController,
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
     public fb: FormBuilder,
     private router: Router,
-    /*private authService: AuthService*/) {
+    private authService: FirebaseService) {
 
     this.inicioSesion = this.fb.group({
       'email': ["", Validators.required, Validators.email],
@@ -34,10 +39,9 @@ export class HomePage {
     });
   }
 
-  firebaseSvc = inject(FirebaseService);
-  
-
-
+  logIn(email : string, contrasena : string) {
+    this.authService.logInWithEmailAndPassword(email, contrasena)
+  }
   ngOnInit() {
 
   }

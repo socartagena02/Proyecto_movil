@@ -3,8 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { AlertController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { User } from 'firebase/auth';
-//import { error } from 'console';
-//import { UtilsService } from 'path-to-your-utils-service';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 
 @Component({
@@ -19,7 +18,8 @@ export class RegisterPage implements OnInit {
 
   constructor(public FormBuilder: FormBuilder,
     public alertController: AlertController,
-    private afAuth: AngularFireAuth) {
+    private afAuth: AngularFireAuth,
+    private authService: FirebaseService) {
     this.formularioRegistro = this.FormBuilder.group({
       'nombre': new FormControl("", Validators.required),
       'apellido': new FormControl("", Validators.required),
@@ -27,7 +27,6 @@ export class RegisterPage implements OnInit {
       'contraseña': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
       'repetirPassword': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
       'usuario': ["", [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$')]],
-//      this:utilsSvc = new UtilsService()
     });
   }
 
@@ -90,7 +89,7 @@ export class RegisterPage implements OnInit {
       repetirContraseñaControl?.dirty === true
     );
   }
-  async submit() {
-
+  signUp(email: string, contrasena: string){
+    this.authService.signUpWithEmailAndPassword(email,contrasena);
   }
 }

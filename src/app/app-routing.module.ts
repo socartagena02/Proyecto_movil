@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './shared/shared.guard';
 
 const routes: Routes = [
   {
@@ -43,8 +44,10 @@ const routes: Routes = [
     path: 'tarifas',
     loadChildren: () => import('./tarifas/tarifas.module').then( m => m.TarifasPageModule)
   },
-
-
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule),
+    canActivate: [AuthGuard]},
 ];
 
 @NgModule({
