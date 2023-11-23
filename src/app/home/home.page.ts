@@ -42,6 +42,10 @@ export class HomePage {
   logIn(email : string, contrasena : string) {
     this.authService.logInWithEmailAndPassword(email, contrasena)
   }
+    
+
+
+
   ngOnInit() {
 
   }
