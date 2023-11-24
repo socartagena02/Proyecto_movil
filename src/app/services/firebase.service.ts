@@ -40,7 +40,7 @@ export class FirebaseService {
         this.observeUserState()
       })
       .catch((error) => {
-        alert(error.message);
+      console.error(error.code, error.message);
       })
   }
   //Registro con email y contraseña 
@@ -52,7 +52,7 @@ export class FirebaseService {
       this.observeUserState() 
     })
     .catch((error) => {
-      alert(error.message);
+      console.error(error.code, error.message);
     })
   }
   observeUserState() {
@@ -68,7 +68,7 @@ export class FirebaseService {
         this.observeUserState()
       })
       .catch((error) => {
-        alert(error.message);
+        console.error(error.code, error.message);
       })
   }
   //Retornar verdadero cuando el usuario inicio sesion
