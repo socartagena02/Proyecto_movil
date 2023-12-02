@@ -1,12 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+<ion-header [translucent]="true" class="DuocMovil">
+  <ion-toolbar color="light">
     <ion-title>
       DuocMovil
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="fondohome">
+<ion-content [fullscreen]="true" class="homeBody">
   <div class="inicioSesion">
     <form [formGroup]="inicioSesion" novalidate>
         <h1>Iniciar Sesion</h1>
@@ -17,7 +17,7 @@
         <br>
         <ion-input formControlName="contrasena" label="contraseña" 
         type="password" 
-        id="password" #password 
+        id="password"
         label-placement="floating" fill="solid" 
         placeholder="Ingresa contraseña"
         [(ngModel)]="contrasena" required>Contraseña</ion-input>
@@ -28,12 +28,12 @@
 
         <br>
         <ion-button type="click" (click)="logIn(email, contrasena)"
-        [routerLink]="['/ventana3']">iniciar sesion</ion-button>
+        [routerLink]="['/ventana3']" color="light">iniciar sesion</ion-button>
     </form>
     
   </div>
 </ion-content>
-<ion-button [routerLink]="['/register']">Registrar</ion-button>
+<ion-button [routerLink]="['/register']" color="light">Registrar</ion-button>
 
 
 

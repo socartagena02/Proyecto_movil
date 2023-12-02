@@ -1,6 +1,6 @@
 <ion-menu contentId="main-content">
   <ion-header>
-    <ion-toolbar color="tertiary">
+    <ion-toolbar color="light">
       <ion-title>Opciones</ion-title>
     </ion-toolbar>
     
@@ -17,7 +17,7 @@
   </ion-header>
   <!--contenido del menu-->
 
-  <ion-button [routerLink]="['/home']">Cerrar Sesion</ion-button>
+  <ion-button [routerLink]="['/home']" color="light">Cerrar Sesion</ion-button>
 </ion-menu>
 <div class="ion-page" id="main-content">
   <ion-header>
@@ -29,16 +29,17 @@
     </ion-toolbar>
   </ion-header>
    <!--contenido-->
-  <section class="form-viaje">
-    <h4>realizar viajes</h4>
+<ion-content [fullscreen]="true" class="fondoventana5">
+  <section class="form-viaje" >
+    <h4>Realizar viajes</h4>
     <h6>Punto de partida</h6>
-    <ion-input label="ubicación" label-placement="floating" fill="outline" placeholder="Ingrese ubicación"></ion-input>
+    <ion-input label="ubicación" label-placement="floating" fill="solid" placeholder="Ingrese ubicación"></ion-input>
     <br>
-    <h6>Destino</h6>
-    <ion-input label="ubicación" label-placement="floating" fill="outline" placeholder="Ingrese ubicación"></ion-input>
+    <h5>Destino</h5>
+    <ion-input label="ubicación" label-placement="floating" fill="solid" placeholder="Ingrese ubicación"></ion-input>
     <br>
-    <h6>precio</h6>
-    <ion-input label="precio" type= "number" label-placement="floating" fill="outline" placeholder="Ingrese precio"></ion-input>
+    <h5>Precio</h5>
+    <ion-input label="Precio" type= "number" label-placement="floating" fill="solid" placeholder="$"></ion-input>
     <br>
     <ion-list>
       <ion-item>
@@ -54,7 +55,7 @@
     </ion-list>
     <br>
     <div class="confirmarViaje2">
-      <ion-button class="botonConfirmar"(click)="setOpen(true)">Confirmar</ion-button>
+      <ion-button class="botonConfirmar"(click)="setOpen(true)" color="light">Confirmar</ion-button>
       <ion-alert
         [routerLink]="['/ventana3']"
         [isOpen]="isAlertOpen"
@@ -63,7 +64,6 @@
         (didDismiss)="setOpen(false)">
       </ion-alert>
     </div>
+    <ion-button [routerLink]="['/ventana3']" color="light">Volver</ion-button>
   </section>
-
-
-<ion-button [routerLink]="['/ventana3']">Volver</ion-button>
+</ion-content>

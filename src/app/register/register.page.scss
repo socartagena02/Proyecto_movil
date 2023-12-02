@@ -15,9 +15,7 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
@@ -31,58 +29,73 @@
   box-sizing: border-box;
 }
 
+.registrarUsuario {
+  width: 350px;
+  background: rgb(255,217,255);
+  background: linear-gradient(90deg, rgba(255,217,255,1) 0%, rgba(158,177,211,1) 100%); 
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 8px;
+  font-family: 'Arial';
+  color: #5d5d5d;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
 
+.registrarUsuario h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
+.registrarUsuario h1 {
+  font-family: 'Arial';
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1d1818;
+}
 
+.controls,
+.select-fruit {
+  background: #2d3945;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibri';
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 12px;
 
-
-
-.registrarUsuario{
-    width: 400px;
-    background: rgb(34, 34, 34);
-    padding: 30px;
-    margin: auto;
-    margin-top: 100px;
-    border-radius:4px;
-    font-family:'calibri';
-    color: rgb(255, 255, 255);
-  }
-  
-  .registrarUsuario h4{
-   font-size: 22px;
-   margin-bottom: 20px;
-  }
-  
-  .registrarUsuario h1{
-    font-size: 22px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .controls{
-
-    background: #24303c;
-    margin-bottom: 16px;
+  input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
     border: 1px solid #1f53c5;
-    font-family: 'calibri';
-    font-size: 18px;
-  
+    border-radius: 4px;
+    margin-bottom: 10px;
   }
 
-  .select-fruit{
-    background: #24303c;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: 'calibri';  
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #4a90e2;
+    color: #fff;
+    transition: background-color 0.3s ease;
 
-  ion-menu::part(backdrop) {
-    background-color: rgba(255, 0, 255, 0.5);
+    &:hover {
+      background-color: #3461a4;
+    }
   }
-  
-  ion-menu::part(container) {
-    border-radius: 0 20px 20px 0;
-  
-    box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
-  }
+}
+
+ion-menu::part(backdrop) {
+  background-color: rgba(255, 0, 255, 0.5);
+}
+
+ion-menu::part(container) {
+  border-radius: 0 20px 20px 0;
+  box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+}

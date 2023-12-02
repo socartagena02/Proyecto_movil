@@ -1,6 +1,6 @@
 <ion-menu contentId="main-content">
   <ion-header>
-    <ion-toolbar color="tertiary">
+    <ion-toolbar color="light">
       <ion-title>Opciones</ion-title>
     </ion-toolbar>
     
@@ -17,7 +17,7 @@
   </ion-header>
   <!--contenido del menu-->
 
-  <ion-button [routerLink]="['/home']">Cerrar Sesion</ion-button>
+  <ion-button [routerLink]="['/home']" color="light">Cerrar Sesion</ion-button>
 </ion-menu>
 <div class="ion-page" id="main-content">
   <ion-header>
@@ -31,18 +31,16 @@
  
   <!--contenido de la app-->
    <ion-content [fullscreen]="true" class="ion-padding"> 
+    <br>
+    <br>
+    <h2 class="nombreDelUsuario">
+      <p>¡Bienvenido User!,
+        ¿Tomaras un viaje hoy? </p>
+    </h2>
+    <div class="puntoPartida">
+      <ion-searchbar class="Busqueda" search-icon="search-circle" placeholder="¿Donde quieres ir?"></ion-searchbar>
+    </div>
     <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.86508698157!2d-71.53575902412106!3d-33.03368467629028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689de64d74fd4af%3A0x8004f381e9055a38!2sDuoc%20UC%3A%20Sede%20Vi%C3%B1a%20Del%20Mar!5e0!3m2!1ses!2scl!4v1696268643549!5m2!1ses!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <br>
-    <div>
-    </div>
-    <br>
-    <div class="puntoPartida">
-      <br>
-      <ion-searchbar class="Busqueda" search-icon="search-circle" placeholder="¿Donde quieres ir?"></ion-searchbar>
-    <br>
-    </div>
-    <br/>
-    <ion-button class="confirmacionViaje" [routerLink]="['/ventana5']">viajar</ion-button> 
+    <ion-button class="confirmacionViaje" [routerLink]="['/ventana5']" color="light">viajar</ion-button> 
   </ion-content>
-  <ion-button [routerLink]="['/home']">Cerrar Sesion</ion-button> 
-

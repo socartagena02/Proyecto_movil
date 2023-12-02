@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>register</ion-title>
+  <ion-toolbar color="light">
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -19,8 +19,6 @@
         <br>
         <ion-input formControlName="emai" label="correo" label-placement="floating" fill="solid" placeholder="Ingresar correo">Correo</ion-input>
         <br>
-        <ion-input formControlName="Nickname"  label="username" label-placement="floating" fill="solid" placeholder="Ingrese apodo">Username</ion-input>
-        <br>
         <ion-input formControlName="contraseña" label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">contraseña</ion-input>
         <br>
         <ion-input formControlName="repetirPassword" label="repetir contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">Repetir contraseña</ion-input>
@@ -29,9 +27,8 @@
         <div>
           <a [routerLink]="['/home']">¿Ya estas registrado?</a>
         </div>
-        <br>
-        <ion-button (click)= "guardar()" >Guardar</ion-button>
       </form>
+      <ion-button (click)= "guardar()" color="light">Guardar</ion-button>
     </ion-card>
 </ion-content>
 
