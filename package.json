@@ -35,6 +35,7 @@
     "@ionic/storage-angular": "^4.0.0",
     "angularfire2": "^5.4.2",
     "cordova-sqlite-storage": "^6.1.0",
+    "cropperjs": "^1.6.1",
     "firebase": "^9.23.0",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",

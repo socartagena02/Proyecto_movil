@@ -17,12 +17,14 @@
         <br>
         <ion-input formControlName="apellido" label="apellido" label-placement="floating" fill="solid" placeholder="Ingrese apellido">apellido</ion-input>
         <br>
-        <ion-input formControlName="emai" label="correo" label-placement="floating" fill="solid" placeholder="Ingresar correo">Correo</ion-input>
+        <ion-input formControlName="email" label="correo" label-placement="floating" fill="solid" placeholder="Ingresar correo">Correo</ion-input>
         <br>
         <ion-input formControlName="contraseña" label="contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">contraseña</ion-input>
         <br>
         <ion-input formControlName="repetirPassword" label="repetir contraseña" type="password" label-placement="floating" fill="solid" placeholder="Ingrese contraseña">Repetir contraseña</ion-input>
         <mat-error *ngIf="contrasenasIguales()">Las contraseñas no coinciden</mat-error>
+        <br>
+        <ion-input formControlName="fono" label="númeroTelefono" label-placement="floating" fill="solid" placeholder="Ingrese número" required>Contacto</ion-input>
         <br>
         <div>
           <a [routerLink]="['/home']">¿Ya estas registrado?</a>

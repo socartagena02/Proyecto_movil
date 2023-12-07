@@ -27,6 +27,8 @@ export class RegisterPage implements OnInit {
       'contraseña': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
       'repetirPassword': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
       'usuario': ["", [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$')]],
+      'email': ["", Validators.required, Validators.email],
+      'fono':["", Validators.required, Validators.email],
     });
   }
 
@@ -36,6 +38,7 @@ export class RegisterPage implements OnInit {
     var apellido = this.formularioRegistro.get('apellido')?.value;
     var contraseña = this.formularioRegistro.get('contraseña')?.value;
     var repetirPassword = this.formularioRegistro.get('repetirPassword')?.value;
+    var fono = this.formularioRegistro.get('fono')?.value;
     
   }
 
@@ -51,7 +54,8 @@ export class RegisterPage implements OnInit {
       apellido: formulario.apellido,
       Nickname: formulario.Nickname,
       contraseña: formulario.contraseña,
-      repetirpassword: formulario.repetirPassword
+      repetirpassword: formulario.repetirPassword,
+      fono: formulario.fono
     }
     
     if (this.formularioRegistro.valid) {

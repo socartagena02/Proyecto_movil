@@ -25,11 +25,11 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Perfil de usuario</ion-title>
+      <ion-title>Configurar Perfil</ion-title>
     </ion-toolbar>
   </ion-header>
 
-<ion-content [fullscreen]="true" class="fondoventana6">
+<ion-content [fullscreen]="true" class="config-perfilBackground">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">ventana6</ion-title>
@@ -38,15 +38,31 @@
   <br>
   <br>
   <br>
-  <img src="https://i0.wp.com/lamiradafotografia.es/wp-content/uploads/2014/07/foto-perfil-psicologo-180x180.jpg?resize=180%2C180" class="fotoPerfil" alt="">
+  <br>
+<div class="fotoPerfil">
+    <a href=""></a>
+    <ion-icon name="person-circle-outline" class="imgPerfil" color="light"></ion-icon>
+    <ion-button class="" color="light">subir foto</ion-button>
+</div>
+  
   <form class="configuracionPerfil">
-    <!--Determinado-->
-    <h3>Nombre: Juan Heraldo</h3>
-    <h3>Apellidos: Perez Nuñez</h3>
-    <h3>Nombre de usuario: JuanPerez20</h3>
-    <h3>Correo electronico: ju.perez@duocuc.cl</h3>
-    <h3>Contacto: +56 9 ... </h3>
-    <ion-button [routerLink]="['/config-perfil']" color="light">Configurar Perfil</ion-button>
-  </form>
+    <h2>Editar Perfil</h2>
+    <br>
+    <h3>Nombre</h3>
+    <ion-input label="Nombre" label-placement="floating" fill="outline" placeholder="Ingrese nombre"></ion-input>   
+    <br>
+    <br>
+    <h3>Apellido</h3>
+    <ion-input label="Apellido" label-placement="floating" fill="outline" placeholder="Ingrese apellidos"></ion-input>   
+    <br>
+    <h3>nickname</h3>
+    <ion-input label="nickname" label-placement="floating" fill="outline" placeholder="Ingrese nickname"></ion-input>
+    <br>
+    <h3>Número de telefono</h3>
+    <ion-input label="Contacto" label-placement="floating" fill="outline" placeholder="Ingrese telefono"></ion-input>
+    <br>
+    <br>
+    <ion-button [routerLink]="['/ventana6']" color="light">Guardar cambios</ion-button>
+    </form>
 </ion-content>
-<ion-button [routerLink]="['/ventana3']" color="light">Volver</ion-button>
+<!--<ion-button [routerLink]="['/ventana3']" color="light">Volver</ion-button>-->

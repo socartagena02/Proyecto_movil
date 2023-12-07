@@ -10,10 +10,6 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FirebaseService } from '../services/firebase.service';
 import { User } from '../models/user.model';
 
-/*Nota para el profe:
-npm install firebase -force
-ionic serve -force
-*/
 
 @Component({
   selector: 'app-home',

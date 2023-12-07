@@ -1,0 +1,56 @@
+.imgPerfil{
+    margin: 0;
+    padding: 0;
+    height: 25vh; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 350px;
+    size: large;
+  }
+
+.fotoPerfil{
+    margin: 0;
+    padding: 0;
+    height: 25vh; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 350px;
+    size: large;
+}
+.configuracionPerfil {
+    margin: auto;  
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.234);
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Arial';
+    box-shadow: 0 0 10px rgba(66, 59, 121, 0.1), 0 4px 8px rgba(24, 13, 53, 0.526);
+}
+
+
+
+.configuracionPerfil ion-input{
+    font-family: 'Arial';
+    color: rgb(169, 132, 62);
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.234);
+    box-shadow: 0 0 10px rgba(66, 59, 121, 0.1);
+    box-shadow: 0 4px 8px rgba(24, 13, 53, 0.526);
+
+  }
+
+.configuracionPerfil h2{
+    font-family: 'Arial';
+    color: rgba(41, 15, 48, 0.607);
+}
+
+.configuracionPerfil h3{
+    font-family: 'Arial', Verdana;
+    color: rgba(58, 20, 69, 0.607);
+}

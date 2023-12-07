@@ -37,7 +37,7 @@ ion-content.homeBody{
 
 
 ion-content.fondoregister{
-    --background: url("https://papers.co/wallpaper/papers.co-sk16-cute-purple-blur-gradation-1-wallpaper.jpg") no-repeat center;
+    --background: url("https://wallpapercave.com/wp/wp9221921.png") no-repeat center;
     margin: 0;
     padding: 0%;
     width: 100%;
@@ -88,6 +88,16 @@ ion-content.fondoventana6{
 
 ion-content.fondoventana5{
     --background: url("https://w0.peakpx.com/wallpaper/206/809/HD-wallpaper-clouds-cute-pixels-purple-sky.jpg") no-repeat center;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-attachment: fixed;
+}
+
+ion-content.config-perfilBackground{
+    --background: url("https://static.vecteezy.com/system/resources/previews/033/573/352/non_2x/city-23rd-century-background-in-pixel-art-rpg-gaming-8-bits-16-bits-style-ai-generative-free-photo.jpg") no-repeat center;
     margin: 0;
     padding: 0%;
     width: 100%;
