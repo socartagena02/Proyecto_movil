@@ -23,19 +23,18 @@ export class RegisterPage implements OnInit {
     this.formularioRegistro = this.FormBuilder.group({
       'nombre': new FormControl("", Validators.required),
       'apellido': new FormControl("", Validators.required),
-      'Nickname': new FormControl("", Validators.required),
       'contraseña': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
       'repetirPassword': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
       'usuario': ["", [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$')]],
-      'email': ["", Validators.required, Validators.email],
-      'fono':["", Validators.required, Validators.email],
+      'email': new FormControl ("", Validators.required),
+      'fono': new FormControl("", Validators.required)
     });
   }
 
   loginFuncion(){
-    var Nickname = this.formularioRegistro.get('Nickname')?.value;
     var nombre = this.formularioRegistro.get('nombre')?.value;
     var apellido = this.formularioRegistro.get('apellido')?.value;
+    var email = this.formularioRegistro.get('email')?.value;
     var contraseña = this.formularioRegistro.get('contraseña')?.value;
     var repetirPassword = this.formularioRegistro.get('repetirPassword')?.value;
     var fono = this.formularioRegistro.get('fono')?.value;
@@ -52,7 +51,7 @@ export class RegisterPage implements OnInit {
     let usuario = {
       nombre: formulario.nombre,
       apellido: formulario.apellido,
-      Nickname: formulario.Nickname,
+      correo: formulario.correo,
       contraseña: formulario.contraseña,
       repetirpassword: formulario.repetirPassword,
       fono: formulario.fono
