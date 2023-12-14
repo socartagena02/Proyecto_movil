@@ -23,9 +23,9 @@ export class RegisterPage implements OnInit {
     this.formularioRegistro = this.FormBuilder.group({
       'nombre': new FormControl("", Validators.required),
       'apellido': new FormControl("", Validators.required),
-      'contraseña': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
-      'repetirPassword': ['', [Validators.required, Validators.minLength(3), Validators.maxLength(16)]],
-      'usuario': ["", [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$')]],
+      'contraseña': new FormControl ("", Validators.required),
+      'repetirPassword':new FormControl ("", Validators.required),
+      'usuario': new FormControl ("", Validators.required),
       'email': new FormControl ("", Validators.required),
       'fono': new FormControl("", Validators.required)
     });
@@ -60,39 +60,16 @@ export class RegisterPage implements OnInit {
     if (this.formularioRegistro.valid) {
 
       const alert = await this.alertController.create({
-        header: 'datos completados',
-        message: 'Vuelve a iniciar sesion',
-        buttons: ['OK'],
-      });
-      var guardar = this.formularioRegistro.value;
-      alert.present();
-      console.log(guardar);
-
-    } else {
-      const alert = await this.alertController.create({
-        header: 'datos incompletos',
-        message: 'tienes que completar el formulario porfavor',
+        header: 'datos completos',
+        message: 'Vuelve a inicio de sesion',
         buttons: ['OK'],
       });
       alert.present();
+      console.log('guardado')
 
-    }
+    } 
+ 
     localStorage.setItem('usuario', JSON.stringify(usuario))
   }
-  saveData(){
-    console.log(this.formularioRegistro.value);
-  }
   
-  public contrasenasIguales():  boolean {
-    const contraseñaControl = this.formularioRegistro.get('contraseña');
-    const repetirContraseñaControl = this.formularioRegistro.get('repetirPassword');
-    return(
-      this.formularioRegistro.hasError('noSonIguales') &&
-      contraseñaControl?.dirty === true &&
-      repetirContraseñaControl?.dirty === true
-    );
-  }
-  signUp(email: string, contrasena: string){
-    this.authService.signUpWithEmailAndPassword(email,contrasena);
-  }
 }

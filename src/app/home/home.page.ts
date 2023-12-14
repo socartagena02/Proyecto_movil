@@ -30,7 +30,7 @@ export class HomePage {
     private authService: FirebaseService) {
 
     this.inicioSesion = this.fb.group({
-      'email': ["", Validators.required, Validators.email],
+      'email': ["", [Validators.required, Validators.email]],
       'contrasena': ["", [Validators.required, Validators.minLength(3), Validators.maxLength(12)]],
     });
   }
